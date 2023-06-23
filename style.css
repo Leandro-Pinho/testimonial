@@ -1,0 +1,332 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+:root {
+    --Dark-Blue: hsl(240, 38%, 20%);
+    --Grayish-Blue: hsl(240, 18%, 77%)
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: #ffffff;
+}
+
+main #img-bg {
+    position: absolute;
+    width: 500px;
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+}
+
+.card {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+}
+
+.testimonial {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+}
+
+.text-testimonial {
+    position: relative;
+    top: 40px;
+    left: 100px;
+    font-size: 30px;
+    padding-left: 100px;
+    flex-basis: 50%;
+}
+
+.text-testimonial #quote {
+    position: absolute;
+    z-index: -1;
+    top: -65px;
+    left: 180px;
+}
+
+.text-testimonial p {
+    color: var(--Dark-Blue);
+    line-height: 40px;
+    letter-spacing: 0.5px;
+    position: relative;
+    font-weight: 300;
+    z-index: 1;
+}
+
+.text-testimonial h2 {
+    font-size: 20px;
+    margin-top: 35px;
+    color: var(--Dark-Blue);
+    letter-spacing: 0.5px;
+    z-index: 1;
+}
+
+.text-testimonial h2 span {
+    color: var(--Grayish-Blue);
+}
+
+.self {
+    /* background-image: url(images/pattern-bg.svg);
+    background-repeat: no-repeat; */
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+
+    padding-right: 100px;
+    flex-basis: 50%;
+}
+
+.self #bg {
+    position: absolute;
+    width: 600px;
+    top: 60px;
+    right: 140px;
+    z-index: -1;
+}
+
+.testimonial .self #img {
+    position: relative;
+    right: 40px;
+    width: 460px;
+    border-radius: 10px;
+}
+
+.card .button {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    bottom: 125px;
+    left: 145px;
+    gap: 40px;
+    background: #ffffff;
+    padding: 12px;
+    border-radius: 50px;
+    box-shadow: 10px 10px 80px 0 rgb(56, 37, 64);
+}
+
+.tab-content {
+    display: none;
+}
+
+.active-tab {
+    display: flex;
+}
+
+.dot {
+    font-size: 20px;
+    cursor: pointer;
+    opacity: 100%;
+}
+
+.next {
+    position: relative;
+    rotate: 180deg;
+    top: 2.5px;
+}
+
+.active-link {
+    opacity: 20%;
+    cursor: default;
+}
+
+@media only screen and (max-width: 1100px) {
+    .testimonial {
+        flex-wrap: wrap-reverse;
+        text-align: center;
+        align-items: center;
+        margin: 10px;
+    }
+
+    .text-testimonial #quote {
+        width: 80px;
+        top: -15px;
+        left: 130px;
+    }
+
+    .text-testimonial {
+        position: relative;
+        top: 0;
+        left: 0;
+        font-size: 30px;
+        padding-left: 0;
+        flex-basis: 100%;
+    }
+
+    .text-testimonial {
+        text-align: center;
+    }
+
+    .text-testimonial p {
+        margin: 20px;
+    }
+
+    .self #bg {
+        width: 500px;
+        top: 20px;
+        right: 50px;
+    }
+
+    .testimonial .self #img {
+        position: relative;
+        right: 0;
+        left: 50px;
+        width: 400px;
+    }
+
+    .card .button {
+        bottom: 260px;
+        left: 0px;
+    }
+}
+
+@media only screen and (max-width: 950px) {
+    .card .button {
+        bottom: 270px;
+    }
+
+    .text-testimonial p {
+        font-size: 26px;
+    }
+}
+
+@media only screen and (max-width: 830px) {
+    .testimonial .self #img {
+        position: relative;
+        right: 0;
+        left: 50px;
+        width: 380px;
+    }
+
+    .text-testimonial p {
+        font-size: 25px;
+    }
+
+}
+
+@media only screen and (max-width: 800px) {
+    .testimonial .self #img {
+        position: relative;
+        right: 0;
+        left: 50px;
+        width: 370px;
+    }
+
+    .card .button {
+        bottom: 285px;
+    }
+
+
+}
+
+@media only screen and (max-width: 768px) {
+    .testimonial .self #img {
+        right: 0;
+        left: 50px;
+        width: 360px;
+    }
+
+    .card .button {
+        bottom: 290px;
+    }
+}
+
+
+@media only screen and (max-width: 650px) {
+    .testimonial .self #img {
+        width: 340px;
+    }
+
+    .card .button {
+        bottom: 330px;
+    }
+}
+
+@media only screen and (max-width: 624px) {
+    .testimonial .self #img {
+        width: 320px;
+    }
+
+    .card .button {
+        bottom: 350px;
+    }
+
+    .text-testimonial p {
+        margin: 20px;
+        font-size: 24px;
+        font-weight: 400;
+    }
+}
+
+@media only screen and (max-width: 515px) {
+    .testimonial .self #img {
+        width: 320px;
+    }
+
+    .card .button {
+        bottom: 350px;
+    }
+
+    .text-testimonial p {
+        margin: 20px;
+        font-size: 22px;
+        font-weight: 400;
+    }
+
+    main #img-bg {
+        position: absolute;
+        width: 300px;
+        left: 0;
+        bottom: 0;
+        z-index: -1;
+    }
+}
+
+@media only screen and (max-width: 430px) {
+
+    .self #bg {
+        width: 400px;
+        top: 50px;
+        right: 40px;
+    }
+
+    .text-testimonial p {
+        margin: 20px;
+        font-size: 20px;
+    }
+
+    main #img-bg {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 390px) {
+
+    .self #bg {
+        width: 300px;
+        top: 50px;
+        right: 20px;
+    }
+
+    .text-testimonial p {
+        margin: 30px;
+        font-size: 18px;
+    }
+
+}
